@@ -1,4 +1,10 @@
-projdir <- '/mnt/sdcard/project/eda-wk4'
+## Plot1 
+## * Have total emissions from PM2.5 decreased in the United States from 1999 to 2008? 
+## * Uses the base plotting system
+## * Shows the total PM2.5 emission from all sources for each of the years 1999, 2002, 2005, and 2008.
+
+## set paths
+projdir <- '/mnt/sdcard/project/exploratorydata'
 summaryfile <- 'summarySCC_PM25.rds'
 codefile <- 'Source_Classification_Code.rds'
 setwd(projdir)
@@ -20,3 +26,4 @@ plot(p1_1$year,p1_1$Emissions,type="n",xlab="year",ylab="total PM2.5 Emission")
 lines(p1_1$year,p1_1$Emissions)
 title(main="PM2.5 emissions over time")
 dev.off()
+## Saved file plot1.png
