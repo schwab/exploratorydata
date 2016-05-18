@@ -26,7 +26,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 
 ## Filter data
 baltimore <- NEI[NEI$fips=='24510',]
-summed <- dplyr(baltimore,.(year,type), summarize,sum=sum(Emissions))
+summed <- ddply(baltimore,.(year,type), summarize,sum=sum(Emissions))
 
 ## plot chart
 png('plot3.png')
